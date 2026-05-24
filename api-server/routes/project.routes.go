@@ -79,7 +79,13 @@ func HandleCreateProject(c *gin.Context) {
 		return
 	}
 
-	apiClient, err := client.New(client.WithHost("tcp://localhost:2375"))
+	dockerHost := os.Getenv("DOCKER_HOST")
+	if dockerHost == "" {
+		// dockerHost = "tcp://localhost:2375" 
+		dockerHost = "unix:///var/run/docker.sock" 
+	}
+
+	apiClient, err := client.New(client.WithHost(dockerHost))
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, formatError("DOCKER_CLIENT_ERROR", "Error connecting to Docker client", "Check Docker daemon connection", fmt.Sprintf("Error creating Docker client: %v", err)))
 		return
