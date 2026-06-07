@@ -28,13 +28,13 @@ interface HeroProps {
 
 const DEFAULT_HERO_BUTTONS: HeroButtonProps[] = [
   {
-    href: siteConfig.getStartedUrl,
-    text: "Get Started",
+    href: "/signup",
+    text: "Start Building",
     variant: "default",
   },
   {
     href: siteConfig.links.github,
-    text: "GitHub",
+    text: "View GitHub",
     variant: "default",
     icon: <GitGraphIcon className="mr-2 size-4" />,
   },
@@ -43,10 +43,10 @@ const DEFAULT_HERO_BUTTONS: HeroButtonProps[] = [
 const DEFAULT_HERO_BADGE = (
   <Badge variant="outline" className="animate-appear">
     <span className="text-muted-foreground">
-      New version of Launch UI is out!
+      Oxyra cloud pipeline is evolving fast
     </span>
-    <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-      Get started
+    <a href="/dashboard" className="flex items-center gap-1">
+      Open dashboard
       <ArrowRightIcon className="size-3" />
     </a>
   </Badge>
@@ -64,8 +64,8 @@ const DEFAULT_HERO_MOCKUP = (
 );
 
 export default function Hero({
-  title = "Give your big idea the design it deserves",
-  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+  title = "Deploy vite apps quick",
+  description = "Oxyra connects a Go API orchestrator, a stateless build worker, and a smart asset proxy so you can trigger deployments, stream logs in real time, and ship from Git with full control.",
   mockup = DEFAULT_HERO_MOCKUP,
   badge = DEFAULT_HERO_BADGE,
   buttons = DEFAULT_HERO_BUTTONS,
@@ -84,7 +84,7 @@ export default function Hero({
           <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
             {title}
           </h1>
-          <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl ">
+          <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-185 font-medium text-balance opacity-0 delay-100 sm:text-xl ">
             {description}
           </p>
           {buttons !== false && buttons.length > 0 && (

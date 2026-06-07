@@ -14,18 +14,18 @@ interface LogosProps {
 }
 
 export default function Logos({
-  title = "Built with industry-standard tools and best practices",
+  title = "Powered by a distributed Go + Next.js architecture",
   badge = (
     <Badge variant="outline" className="border-brand/30 text-brand">
       Last updated: {siteConfig.stats.updated}
     </Badge>
   ),
   logos = [
-    <Logo key="rocket" image={Rocket} name="Rocket" version="1.0" />,
-    <Logo key="cloud" image={Cloud} name="Cloud" version="2.1" />,
-    <Logo key="git-branch" image={GitBranch} name="Git Branch" version="3.2" />,
-    <Logo key="zap" image={Zap} name="Zap" version="4.5" />,
-    <Logo key="database" image={Database} name="Database" version="5.0" />,
+    <Logo key="api" image={Rocket} name="Go API Server" version="JWT + WebSocket" />,
+    <Logo key="build" image={Cloud} name="Build Worker" version="CI/CD Runtime" />,
+    <Logo key="git" image={GitBranch} name="Git Pipelines" version="Branch Based" />,
+    <Logo key="events" image={Zap} name="Kafka Events" version="Real-time Logs" />,
+    <Logo key="storage" image={Database} name="S3/B2 Storage" version="Artifact Delivery" />,
   ],
   className,
 }: LogosProps) {

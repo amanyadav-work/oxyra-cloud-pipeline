@@ -26,56 +26,56 @@ interface ItemsProps {
 
 const DEFAULT_ITEMS: ItemProps[] = [
   {
-    title: "Accessibility first",
-    description: "Fully WCAG 2.0 compliant, made with best a11y practices",
+    title: "Go microservices core",
+    description: "Split responsibilities across API, build, and proxy services for cleaner scaling and ownership.",
     icon: <ScanFaceIcon className="size-5 stroke-1" />,
   },
   {
-    title: "Responsive design",
-    description: "Looks and works great on any device and screen size",
+    title: "Live deployment logs",
+    description: "Stream stdout and stderr in real time through Kafka and WebSocket channels per project.",
     icon: <MonitorSmartphoneIcon className="size-5 stroke-1" />,
   },
   {
-    title: "Light and dark mode",
-    description: "Seamless switching between color schemes, 6 themes included",
+    title: "Git-driven builds",
+    description: "Run install and build commands from your repo and branch with customizable pipeline steps.",
     icon: <EclipseIcon className="size-5 stroke-1" />,
   },
   {
-    title: "Easy to customize",
-    description: "Flexible options to match your product or brand",
+    title: "Artifact cloud storage",
+    description: "Upload build output to S3 or Backblaze B2 with project-scoped paths and safe access patterns.",
     icon: <BlocksIcon className="size-5 stroke-1" />,
   },
   {
-    title: "Top-level performance",
-    description: "Made for lightning-fast load times and smooth interactions",
+    title: "Subdomain asset proxy",
+    description: "Serve deployed assets through a dedicated proxy layer with routing and guardrails.",
     icon: <FastForwardIcon className="size-5 stroke-1" />,
   },
   {
-    title: "Production ready",
-    description: "Thoroughly tested and launch-prepared",
+    title: "JWT-secured access",
+    description: "Protect project actions with authenticated sessions and scoped API access across the platform.",
     icon: <RocketIcon className="size-5 stroke-1" />,
   },
   {
-    title: "Made for localization",
-    description: "Easy to implement support for multiple languages and regions",
+    title: "Observability built in",
+    description: "Persist and query historical logs while continuing to monitor active deployments live.",
     icon: <LanguagesIcon className="size-5 stroke-1" />,
   },
   {
-    title: "CMS friendly",
-    description: "Built to work with any headless content management system",
+    title: "Developer-first dashboard",
+    description: "Create projects, trigger deployments, and inspect build output from one focused control plane.",
     icon: <SquarePenIcon className="size-5 stroke-1" />,
   },
 ];
 
 export default function Items({
-  title = "Everything you need. Nothing you don't.",
+  title = "Everything needed to ship from code to cloud.",
   items = DEFAULT_ITEMS,
   className,
 }: ItemsProps) {
   return (
     <Section className={className}>
       <div className="max-w-container mx-auto flex flex-col items-center gap-6 sm:gap-20">
-        <h2 className="max-w-[560px] text-center text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
+        <h2 className="max-w-140 text-center text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
           {title}
         </h2>
         {items !== false && items.length > 0 && (
@@ -130,7 +130,7 @@ function ItemDescription({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="item-description"
       className={cn(
-        "text-muted-foreground flex max-w-[240px] flex-col gap-2 text-sm text-balance",
+        "text-muted-foreground flex max-w-60 flex-col gap-2 text-sm text-balance",
         className,
       )}
       {...props}

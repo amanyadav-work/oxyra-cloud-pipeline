@@ -1,82 +1,69 @@
 'use client'
 
-import { useTheme } from "next-themes";
-
 const Footer = () => {
-  const { theme } = useTheme()
   const logo = {
-    src: "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_6dcd65ae310584ca482ed6db823cb5fc/micro1.png",
-    alt: "blocks for shadcn/ui",
-    title: "",
-    url: "https://www.amanwebdev.site",
+    title: "Oxyra",
+    url: "/",
   };
 
-  const tagline = "Talents made easy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
+  const tagline = "A modular cloud deployment platform for teams that want real observability, reproducible builds, and full infrastructure control.";
 
   const menuItems = [
     {
       title: "Product",
       links: [
-        { text: "Overview", url: "#" },
-        { text: "Pricing", url: "#" },
-        { text: "Marketplace", url: "#" },
-        { text: "Features", url: "#" },
-        { text: "Integrations", url: "#" },
-        { text: "Pricing", url: "#" },
+        { text: "Overview", url: "/" },
+        { text: "Dashboard", url: "/dashboard" },
+        { text: "Import Project", url: "/project/import" },
+        { text: "Login", url: "/login" },
+        { text: "Sign up", url: "/signup" },
       ],
     },
     {
       title: "Company",
       links: [
-        { text: "About", url: "#" },
-        { text: "Team", url: "#" },
-        { text: "Blog", url: "#" },
-        { text: "Careers", url: "#" },
-        { text: "Contact", url: "#" },
-        { text: "Privacy", url: "#" },
+        { text: "API Server", url: "#" },
+        { text: "Build Server", url: "#" },
+        { text: "Proxy Server", url: "#" },
+        { text: "Real-time Logs", url: "#" },
+        { text: "Artifact Storage", url: "#" },
       ],
     },
     {
-      title: "Resources",
+      title: "Developers",
       links: [
-        { text: "Help", url: "#" },
-        { text: "Sales", url: "#" },
-        { text: "Advertise", url: "#" },
+        { text: "GitHub", url: "https://github.com/amanyadav-work" },
+        { text: "Architecture", url: "/" },
+        { text: "Deployment Flow", url: "/" },
       ],
     },
     {
       title: "Social",
       links: [
-        { text: "Twitter", url: "#" },
-        { text: "Instagram", url: "#" },
-        { text: "LinkedIn", url: "#" },
+        { text: "GitHub", url: "https://github.com/amanyadav-work" },
+        { text: "Portfolio", url: "https://yadavaman.com/" },
+        { text: "Email", url: "mailto:amansyadav31@gmail.com" },
       ],
     },
   ];
 
-  const copyright = "© 2024 amanwebdev.site. All rights reserved.";
+  const copyright = "© 2026 Oxyra Cloud. All rights reserved.";
 
   const bottomLinks = [
-    { text: "Terms and Conditions", url: "#" },
-    { text: "Privacy Policy", url: "#" },
+    { text: "Terms and Conditions", url: "/" },
+    { text: "Privacy Policy", url: "/" },
   ];
 
   return (
     <section className="py-32">
-      <div className="container max-w-[1400px] mx-auto sm:px-6 lg:px-8">
+      <div className="container max-w-350 mx-auto sm:px-6 lg:px-8">
         <footer>
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">
               <div className="flex items-center gap-2 lg:justify-start">
                 <a href={logo.url}>
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    title={logo.title}
-                    className={`h-10 ${theme === "light" ? "" : "brightness-[11]"}`}
-                  />
+                  <div className="text-base font-semibold text-primary">{logo.title}</div>
                 </a>
-                <p className="text-xl font-semibold">{logo.title}</p>
               </div>
               <p className="mt-4 font-bold">{tagline}</p>
             </div>

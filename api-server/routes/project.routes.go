@@ -81,8 +81,8 @@ func HandleCreateProject(c *gin.Context) {
 
 	dockerHost := os.Getenv("DOCKER_HOST")
 	if dockerHost == "" {
-		// dockerHost = "tcp://localhost:2375" 
-		dockerHost = "unix:///var/run/docker.sock" 
+		dockerHost = "tcp://localhost:2375" 
+		// dockerHost = "unix:///var/run/docker.sock" 
 	}
 
 	apiClient, err := client.New(client.WithHost(dockerHost))
