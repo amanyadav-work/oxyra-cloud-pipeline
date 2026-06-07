@@ -3,10 +3,10 @@
 **Oxyra** is a backend-heavy, modular cloud deployment platform focused on scalable, observable, and automated build/deploy pipelines. It is designed for developers who want full control over their deployment infrastructure, with a strong emphasis on Go-based backend microservices, event-driven architecture, and cloud-native patterns.
 
 <p align="center">
-  <img src="oxyra-cloud-client/public/screenshot2.png" alt="Oxyra Dashboard Light" style="border:1.5px solid grey; border-radius:5px"/>
+  <img src="oxyra-cloud-client/public/screenshot.png" alt="Oxyra Dashboard Light" style="border:1.5px solid grey; border-radius:5px"/>
   <br/>
   <img src="oxyra-cloud-client/public/screenshot1.png" alt="Oxyra Dashboard Dark"  style="border:1.5px solid grey; border-radius:5px"/>
-  <img src="oxyra-cloud-client/public/screenshot3.png" alt="Oxyra Project Add Demo"  style="border:1.5px solid grey; border-radius:5px"/>
+  <img src="oxyra-cloud-client/public/screenshot2.png" alt="Oxyra Project Add Demo"  style="border:1.5px solid grey; border-radius:5px"/>
 </p>
 
 ---
